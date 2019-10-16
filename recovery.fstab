@@ -1,0 +1,10 @@
+/boot		emmc	/dev/block/platform/bootdevice/by-name/boot
+/recovery	emmc	/dev/block/platform/bootdevice/by-name/recovery	flags=backup=1
+/system		ext4	/dev/block/platform/bootdevice/by-name/system
+/vendor         ext4    /dev/block/platform/bootdevice/by-name/vendor flags=backup=1
+/data		ext4	/dev/block/platform/bootdevice/by-name/userdata	flags=encryptable=/dev/block/platform/bootdevice/by-name/metadata
+/cache		ext4	/dev/block/platform/bootdevice/by-name/cache
+/misc		emmc	/dev/block/platform/bootdevice/by-name/misc
+/metadata   emmc    /dev/block/platform/bootdevice/by-name/metadata
+/external_sd	auto	/dev/block/mmcblk1p1	/dev/block/mmcblk1							flags=display="MicroSD";storage;wipeingui;removable;backup=0
+/usb-otg        vfat     	/dev/block/sda1 /dev/block/sda flags=display="USB OTG";storage;wipeingui;removable
