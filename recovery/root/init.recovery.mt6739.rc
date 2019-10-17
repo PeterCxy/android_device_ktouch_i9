@@ -1,4 +1,5 @@
 on init
+    start logd
     mkdir /config
     mount configfs none /config
     mkdir /config/usb_gadget/g1 0770 shell shell
@@ -11,6 +12,8 @@ on init
     mkdir /config/usb_gadget/g1/configs/b.1 0777 shell shell
     mkdir /config/usb_gadget/g1/configs/b.1/strings/0x409 0770 shell shell
     mkdir /config/usb_gadget/g1/functions/ffs.adb
+
+    setprop crypto.ready 1
 
 on post-fs-data
 # Support A/B feature for boot region
@@ -33,3 +36,10 @@ on property:sys.usb.ffs.ready=1
     write /config/usb_gadget/g1/idProduct 0xd001
     symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1
     write /config/usb_gadget/g1/UDC "musb-hdrc"
+
+service logd /sbin/logd
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
