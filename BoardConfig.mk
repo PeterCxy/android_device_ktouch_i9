@@ -90,5 +90,6 @@ TARGET_NO_RECOVERY := false
 BOARD_VNDK_VERSION := current
 PRODUCT_TARGET_VNDK_VERSION := 27
 PRODUCT_EXTRA_VNDK_VERSIONS := 27
+TARGET_CUSTOM_LDCONFIG_TEMPLATE_27 := $(DEVICE_PATH)/configs/ld.config.txt
 
 -include vendor/ktouch/i9/BoardConfigVendor.mk
