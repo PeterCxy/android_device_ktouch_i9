@@ -17,6 +17,9 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
+# Get non-open-source specific aspects
+$(call inherit-product-if-exists, vendor/ktouch/i9/i9-vendor.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
@@ -36,6 +39,10 @@ PRODUCT_PACKAGES += \
 # Fstab
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6739:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6739
+
+# Init
+PRODUCT_PACKAGES += \
+    init.mt6739.rc
 
 # Telephony
 PRODUCT_PACKAGES += \

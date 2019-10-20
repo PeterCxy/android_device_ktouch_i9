@@ -1,0 +1,19 @@
+on init
+    #start adbd
+    #start logcatout
+
+on post-fs
+    start logcatout
+    start logcatout2
+
+service logcatout /system/bin/logcat -f /dev/kmsg
+    class core
+    user root
+    shutdown critical
+    disabled
+
+service logcatout2 /system/bin/logcat -f /cache/logcat.txt
+    class core
+    user root
+    shutdown critical
+    disabled
