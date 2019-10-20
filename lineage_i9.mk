@@ -32,7 +32,8 @@ TARGET_SCREEN_WIDTH := 340
 # Build info
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.ffs.aio_compat=true \
-    ro.vndk.version=27
+    ro.vndk.version=27 \
+    ro.config.avoid_gfx_accel=true \
 
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-ktouch
