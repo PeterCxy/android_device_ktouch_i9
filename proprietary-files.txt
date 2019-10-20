@@ -1,8 +1,16 @@
 # MTK libdirect-coredump
-lib/libdirect-coredump.so|a3eeb6d03f7a5387d35df99c9ceedd81b262f23d
-lib64/libdirect-coredump.so|a02c9b55bd56835584e0ad4a69407e131bb27a6d
+lib/vndk-27/libdirect-coredump.so|a3eeb6d03f7a5387d35df99c9ceedd81b262f23d
+lib64/vndk-27/libdirect-coredump.so|a02c9b55bd56835584e0ad4a69407e131bb27a6d
 
 # Stock libstdc++ for vendor binaries
 # Some vendor binary only work with this
 lib/vndk-27/libstdc++.so|abe7e49971cf5ae935f56fcb2ebc96c7fe566864
 lib64/vndk-27/libstdc++.so|470ff2a4fbb7ae40eb4da4fb643ce5046f0a565f
+
+# Stock liblogwrap needed by some vendor binaries
+lib/vndk-27/liblogwrap.so|0717c1a2a2ddfdf94dcf02d2fca15bf256c1bd35
+lib64/vndk-27/liblogwrap.so|e198deb690fe09debe9d905cbf1160ebecc1c8fb
+
+# Audio
+lib/vndk-27/libeffectsconfig.so|97ec97c593b03ccd6b0ec80dfc66400d5f3a5dac
+lib64/vndk-27/libeffectsconfig.so|d9404f2fa03a748766992cc21a37713c0697d79e
