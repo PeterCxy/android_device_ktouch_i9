@@ -1,4 +1,6 @@
 on init
+    setprop persist.adb.nonblocking_ffs 0
+    setprop ro.adb.nonblocking_ffs 0
     setprop persist.sys.usb.config adb
     #start adbd
     #start logcatout
