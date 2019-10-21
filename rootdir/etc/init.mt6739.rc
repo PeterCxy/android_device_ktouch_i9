@@ -4,3 +4,5 @@ on init
     setprop ro.adb.nonblocking_ffs 0
     setprop persist.sys.usb.config adb
 
+on post-fs-data
+    exec -- /system/bin/init.wifi.mt6739.sh

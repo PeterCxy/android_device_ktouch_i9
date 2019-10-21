@@ -42,7 +42,8 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.mt6739.rc
+    init.mt6739.rc \
+    init.wifi.mt6739.sh
 
 # Telephony
 PRODUCT_PACKAGES += \
