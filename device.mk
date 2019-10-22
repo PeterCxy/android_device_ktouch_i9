@@ -43,7 +43,8 @@ PRODUCT_COPY_FILES += \
 # Init
 PRODUCT_PACKAGES += \
     init.mt6739.rc \
-    init.wifi.mt6739.sh
+    init.wifi.mt6739.sh \
+    fstab.enableswap
 
 # Telephony
 PRODUCT_PACKAGES += \
