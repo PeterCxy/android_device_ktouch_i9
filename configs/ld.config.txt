@@ -426,6 +426,8 @@ namespace.default.asan.permitted.paths +=           /vendor
 
 namespace.default.links = system,vndk%VNDK_IN_SYSTEM_NS%,runtime
 namespace.default.link.system.shared_libs = %LLNDK_LIBRARIES%
+# For libcam.camadapter.so
+namespace.default.link.system.shared_libs += libhwui.so
 namespace.default.link.vndk_in_system.shared_libs = %VNDK_USING_CORE_VARIANT_LIBRARIES%
 namespace.default.link.vndk.allow_all_shared_libs = true
 namespace.default.link.runtime.shared_libs = libnativeloader.so

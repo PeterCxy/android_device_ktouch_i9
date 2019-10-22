@@ -4,5 +4,8 @@ on init
     setprop ro.adb.nonblocking_ffs 0
     setprop persist.sys.usb.config adb
 
+on fs
+    mount none /system/lib/libcam.camadapter.so /vendor/lib/libcam.camadapter.so bind
+
 on post-fs-data
     exec -- /system/bin/init.wifi.mt6739.sh
