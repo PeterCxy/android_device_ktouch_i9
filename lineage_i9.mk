@@ -32,7 +32,7 @@ TARGET_SCREEN_WIDTH := 340
 # Build info
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vndk.version=27 \
-    ro.config.avoid_gfx_accel=true \
+    ro.skia.ignore_swizzle=true \
     ro.radio.apn_force_cognitive=true
 
 # GMS
