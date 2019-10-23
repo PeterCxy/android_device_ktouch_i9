@@ -46,6 +46,11 @@ PRODUCT_PACKAGES += \
     init.wifi.mt6739.sh \
     fstab.enableswap
 
+# Sepolicy overlay
+# We don't want to ship vendor image so let's do this
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/nonplat_sepolicy.cil:$(TARGET_COPY_OUT_SYSTEM)/etc/selinux/sepolicy_overlay/vendor.cil
+
 # Telephony
 PRODUCT_PACKAGES += \
     telephony-ext
