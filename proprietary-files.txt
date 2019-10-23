@@ -22,3 +22,7 @@ lib64/vndk-27/libeffectsconfig.so|d9404f2fa03a748766992cc21a37713c0697d79e
 lib/vndk-27/libcamera_client.so|914667f0d6b09bc76f930dc1f787a117a9e46344
 # sed -i -e "s/libskia/libhwui/" libcam.camadapter.so
 lib/libcam.camadapter.so|be04b2b6267e4c8ff7b066b6c7e9c0303771918c
+
+# RIL
+lib/vndk-27/libnetd_client.so|c77e0e5e89e0031b015f325d4eb96e4ab114eed1
+lib64/vndk-27/libnetd_client.so|b2db80a70ea893ca8e57a66e4c3bbd57aba3e84a
