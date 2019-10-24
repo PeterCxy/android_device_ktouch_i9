@@ -1,6 +1,6 @@
 /boot		emmc	/dev/block/platform/bootdevice/by-name/boot
 /recovery	emmc	/dev/block/platform/bootdevice/by-name/recovery	flags=backup=1
-/system		ext4	/dev/block/platform/bootdevice/by-name/system
+/system_root	ext4	/dev/block/platform/bootdevice/by-name/system flags=display="System"
 /vendor         ext4    /dev/block/platform/bootdevice/by-name/vendor flags=backup=1
 /data		ext4	/dev/block/platform/bootdevice/by-name/userdata	flags=encryptable=/dev/block/platform/bootdevice/by-name/metadata
 /cache		ext4	/dev/block/platform/bootdevice/by-name/cache

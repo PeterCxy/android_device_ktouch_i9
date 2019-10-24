@@ -63,3 +63,6 @@ TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 120
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+
+# System-as-root - for Android 10 (non-GSI, LineageOS 17.0) support
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true

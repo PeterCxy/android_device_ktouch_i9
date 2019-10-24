@@ -15,6 +15,9 @@ on init
 
     setprop crypto.ready 1
 
+on fs
+    export ANDROID_ROOT /system_root
+
 on post-fs-data
 # Support A/B feature for boot region
     symlink /dev/block/mmcblk0boot0 /dev/block/platform/bootdevice/by-name/preloader_a
