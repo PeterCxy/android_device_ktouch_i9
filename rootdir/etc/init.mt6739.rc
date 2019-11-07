@@ -6,6 +6,7 @@ on init
 
 on fs
     mount none /system/lib/libcam.camadapter.so /vendor/lib/libcam.camadapter.so bind
+    mount none /system/etc/media_codecs_mediatek_video.xml /vendor/etc/media_codecs_mediatek_video.xml bind
 
 on post-fs-data
     exec -- /system/bin/init.wifi.mt6739.sh
@@ -13,3 +14,4 @@ on post-fs-data
 on zygote-start
     # Re-mount our bind mounts due to Magisk starting in `post-fs-data`
     mount none /system/lib/libcam.camadapter.so /vendor/lib/libcam.camadapter.so bind
+    mount none /system/etc/media_codecs_mediatek_video.xml /vendor/etc/media_codecs_mediatek_video.xml bind
