@@ -9,3 +9,7 @@ on fs
 
 on post-fs-data
     exec -- /system/bin/init.wifi.mt6739.sh
+
+on zygote-start
+    # Re-mount our bind mounts due to Magisk starting in `post-fs-data`
+    mount none /system/lib/libcam.camadapter.so /vendor/lib/libcam.camadapter.so bind
